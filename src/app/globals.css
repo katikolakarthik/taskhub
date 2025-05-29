@@ -1,0 +1,41 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --framer-font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+  --framer-font-family-bold: "Satoshi", "Satoshi Placeholder", sans-serif;
+  --framer-font-family-bold-italic: "Satoshi", "Satoshi Placeholder", sans-serif;
+  --framer-font-family-italic: "Satoshi", "Satoshi Placeholder", sans-serif;
+  --framer-font-open-type-features: "blwf" on, "cv09" on, "cv03" on, "cv04" on, "cv11" on;
+  --framer-font-size: 20px;
+  --framer-font-style: normal;
+  --framer-font-style-bold: normal;
+  --framer-font-style-bold-italic: italic;
+  --framer-font-style-italic: italic;
+  --framer-font-weight: 400;
+  --framer-font-weight-bold: 700;
+  --framer-font-weight-bold-italic: 700;
+  --framer-font-weight-italic: 400;
+  --framer-letter-spacing: 0px;
+  --framer-line-height: 1.7em;
+  --framer-paragraph-spacing: 0px;
+  --framer-text-alignment: start;
+  --framer-text-decoration: none;
+  --framer-text-stroke-color: initial;
+  --framer-text-stroke-width: initial;
+  --framer-text-transform: none;
+}
+
+body {
+  background: linear-gradient(180deg, var(--token-ece894c2-70ba-41bd-b0cd-7922746bacc7, #f8f4f1) -14.000000000000002%, rgba(250, 248, 246, 1) 25.696557806416287%, rgb(255, 255, 255) 100%);
+  min-height: 100vh;
+  font-family: var(--framer-font-family);
+  font-size: var(--framer-font-size);
+  font-weight: var(--framer-font-weight);
+  line-height: var(--framer-line-height);
+  letter-spacing: var(--framer-letter-spacing);
+  color: var(--framer-text-color);
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
