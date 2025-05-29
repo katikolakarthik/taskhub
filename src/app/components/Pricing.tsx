@@ -44,7 +44,7 @@ const checkIcon = (
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
   return (
-    <section className="w-full py-10 flex flex-col items-center ">
+    <section className="w-full py-10 flex flex-col items-center pl-[120px] pr-[120px]">
       {/* Badge */}
       <div className="mb-2 flex items-center justify-center">
         <motion.span className="bg-[#C9FF85] text-[#120A0B] font-semibold px-4 py-1 rounded-full text-sm mr-2" 

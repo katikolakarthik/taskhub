@@ -27,7 +27,7 @@ const faqs = [
 const FAQ = () => {
   const [openIdx, setOpenIdx] = useState(0);
   return (
-    <section className="w-full py-10 flex flex-col items-center">
+    <section className="w-full py-10 flex flex-col items-center pl-[120px] pr-[120px]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-5xl px-4 items-start">
         {/* Left: Heading and description */}
         <div className="flex flex-col items-start justify-center mb-8 md:mb-0">

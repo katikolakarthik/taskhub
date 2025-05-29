@@ -15,7 +15,7 @@ const Trusted = () => {
   const allLogos = [...logos, ...logos];
 
   return (
-    <div className="w-full py-8 flex flex-col items-center">
+    <div className="w-full py-8 flex flex-col items-center pl-[120px] pr-[120px]">
       <h2 className="text-xl md:text-2xl font-medium mb-8 text-center">
         Trusted by the world's most innovative teams
       </h2>

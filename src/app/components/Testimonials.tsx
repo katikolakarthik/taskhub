@@ -31,7 +31,7 @@ const testimonials = [
 const starImg = "https://framerusercontent.com/images/tL8avdiXVdQ0SWTBtkuREC5LP48.svg";
 
 const Testimonials = () => (
-  <section className="w-full py-16 flex flex-col items-center ">
+  <section className="w-full py-16 flex flex-col items-center pl-[120px] pr-[120px]">
     {/* Top badge and heading */}
     <div className="mb-2 flex items-center justify-center">
       <motion.span className="bg-[#8EE6FF] text-[#120A0B] font-semibold px-4 py-1 rounded-full text-sm mr-2" style={{ transform: 'rotate(7deg)' }}

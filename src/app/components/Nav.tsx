@@ -6,7 +6,7 @@ const Nav = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <motion.div className='h-20  w-full  bg-white flex justify-between items-center  mt-4 rounded-3xl cursor-pointer px-5 '>
+    <motion.div className='h-20  w-full  bg-white flex justify-between items-center  mt-4 rounded-3xl cursor-pointer px-5 pl-[120px] pr-[120px]'>
       <div className='flex items-center'>
           <img src="https://framerusercontent.com/images/6pk41POQwzRkqFLgLX6UKDZxEo.png" alt="" className='h-6 w-35'/>
           <div

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Quick = () => {
   return (
-    <div className="relative flex flex-col items-center w-full bottom-15">
+    <div className="relative flex flex-col items-center w-full bottom-15 pl-[120px] pr-[120px]">
       {/* Annotation Row */}
       <div className="relative w-full flex justify-between items-start" style={{ maxWidth: 1200 }}>
         {/* Left Arrow and Text */}
