@@ -1,6 +1,8 @@
 'use client'
 import React from 'react';
 import {motion} from 'framer-motion'
+import Image from 'next/image'
+
 const testimonials = [
   {
     stars: 5,
@@ -59,7 +61,9 @@ const Testimonials = () => (
           {/* Stars */}
           <div className="flex gap-1 mb-6 justify-start">
             {Array.from({ length: t.stars }).map((_, i) => (
-              <img key={i} src={starImg} alt="star" className="w-7 h-7" />
+              <div key={i} className="w-7 h-7 relative">
+                <Image src={starImg} alt="star" fill className="object-contain" />
+              </div>
             ))}
           </div>
           {/* Title */}
@@ -68,7 +72,14 @@ const Testimonials = () => (
           <p className="text-[#454140] mb-8">{t.desc}</p>
           {/* User */}
           <div className="flex items-center gap-4 mt-auto">
-            <img src={t.img} alt={t.name} className="w-12 h-12 rounded-full object-cover" />
+            <div className="w-12 h-12 relative">
+              <Image 
+                src={t.img} 
+                alt={t.name} 
+                fill 
+                className="rounded-full object-cover" 
+              />
+            </div>
             <div className="text-left">
               <div className="font-bold">{t.name}</div>
               <div className="text-[#454140] text-sm">{t.role}</div>

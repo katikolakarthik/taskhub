@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Quick = () => {
   return (
@@ -12,13 +13,18 @@ const Quick = () => {
           <motion.span className="relative top-6  whitespace-nowrap font-bold text-lg text-[#120A0B] text-left" animate={{rotate:-8}}>
             Quick Action<br /><motion.span className='relative left-5 bottom-2' animate={{rotate:-11}}>Buttons</motion.span>
           </motion.span>
-          <motion.img
-            src="https://framerusercontent.com/images/UDlMxmAdmGIZQl1iQYqNrgjkawU.png"
-            alt="Left Arrow"
-            className="w-20 h-15 relative left-17 "
+          <motion.div 
+            className="w-20 h-15 relative left-17"
             animate={{ x: [0, 13, 0] }}
             transition={{ duration: 3, repeat: Infinity, repeatType: 'loop' }}
-          />
+          >
+            <Image
+              src="https://framerusercontent.com/images/UDlMxmAdmGIZQl1iQYqNrgjkawU.png"
+              alt="Left Arrow"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
         </div>
         {/* Right Arrow and Text */}
         <div className="flex relative flex-col items-center" style={{ minWidth: 200 }}>
@@ -31,23 +37,29 @@ const Quick = () => {
 
             </motion.div>
           
-          <motion.img
-            src="https://framerusercontent.com/images/DpgNE8gvOStUIR9igkNISCjMYTw.png"
-            alt="Right Arrow"
+          <motion.div 
             className="w-20 h-15 relative right-16 bottom-10"
-            
             animate={{ x: [0, -13, 0] }}
             transition={{ duration: 3, repeat: Infinity, repeatType: 'loop' }}
-          />
+          >
+            <Image
+              src="https://framerusercontent.com/images/DpgNE8gvOStUIR9igkNISCjMYTw.png"
+              alt="Right Arrow"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
         </div>
       </div>
       {/* Main Image */}
-      <img
-        src="https://framerusercontent.com/images/rN7FYcaLH7ZQff8gdhHQytFe6cg.png"
-        alt="Dashboard Example"
-        className="rounded-3xl shadow-xl h-170 w-250"
-        style={{ maxWidth: 1200 }}
-      />
+      <div className="relative h-170 w-250" style={{ maxWidth: 1200 }}>
+        <Image
+          src="https://framerusercontent.com/images/rN7FYcaLH7ZQff8gdhHQytFe6cg.png"
+          alt="Dashboard Example"
+          fill
+          className="rounded-3xl shadow-xl object-cover"
+        />
+      </div>
     </div>
   );
 };

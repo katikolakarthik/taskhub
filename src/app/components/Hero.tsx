@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import React from 'react'
+import Image from 'next/image'
 
 const Hero = () => {
   return (
@@ -8,9 +9,15 @@ const Hero = () => {
       {/* Review avatars and text */}
       <div className='flex flex-row items-center gap-2 mt-8 mb-6 bg-white px-8 py-1 rounded-full shadow-sm'>
         <span className='flex -space-x-2'>
-          <img src="https://framerusercontent.com/images/0XIOoF2Oain1ymw3aK4KMS8VDE.png" alt="" className='w-8 h-8 rounded-full border-2 border-white'/>
-          <img src="https://framerusercontent.com/images/DxODa2XczEyPpL800pUZkXcDCY.png" alt="" className='w-8 h-8 rounded-full border-2 border-white'/>
-          <img src="https://framerusercontent.com/images/kK54VVzwxoCJrm6zaFFsJ9qWJNo.png" alt="" className='w-8 h-8 rounded-full border-2 border-white'/>
+          <div className="w-8 h-8 relative">
+            <Image src="https://framerusercontent.com/images/0XIOoF2Oain1ymw3aK4KMS8VDE.png" alt="Reviewer avatar 1" fill className='rounded-full border-2 border-white object-cover'/>
+          </div>
+          <div className="w-8 h-8 relative">
+            <Image src="https://framerusercontent.com/images/DxODa2XczEyPpL800pUZkXcDCY.png" alt="Reviewer avatar 2" fill className='rounded-full border-2 border-white object-cover'/>
+          </div>
+          <div className="w-8 h-8 relative">
+            <Image src="https://framerusercontent.com/images/kK54VVzwxoCJrm6zaFFsJ9qWJNo.png" alt="Reviewer avatar 3" fill className='rounded-full border-2 border-white object-cover'/>
+          </div>
         </span>
         <p className='ml-3 text-medium font-medium'>4900+ 5 Stars Reviews</p>
       </div>
@@ -28,11 +35,14 @@ const Hero = () => {
             <span className="text-[#120A0B] text-base  px-4 py-1 rounded-full font-medium shadow mr-2" style={{ background: 'var(--token-cd9072b7-2fb7-4ada-9f08-fb301d6a65e0, #c9ff85)' }}>
               Charles
             </span>
-            <img
-              src="https://framerusercontent.com/images/rVGeJPrHuP3L4RRBJtCkydMASs.png"
-              alt="arrow"
-              className="w-7 h-7 -ml-2 mb-10"
-            />
+            <div className="w-7 h-7 -ml-2 mb-10 relative">
+              <Image
+                src="https://framerusercontent.com/images/rVGeJPrHuP3L4RRBJtCkydMASs.png"
+                alt="arrow"
+                fill
+                className="object-contain"
+              />
+            </div>
           </motion.div>
 
           {/* Headline */}
@@ -47,11 +57,14 @@ const Hero = () => {
             animate={{ x: [0, 13, 0] }}
             transition={{ duration: 3, repeat: Infinity, repeatType: 'loop' }}
           >
-            <img
-              src="https://framerusercontent.com/images/wOHUYMcwMKL2vRlhqyCKvAIzsYI.png"
-              alt="arrow"
-              className="w-7 h-7 -mr-2 mb-9"
-            />
+            <div className="w-7 h-7 -mr-2 mb-9 relative">
+              <Image
+                src="https://framerusercontent.com/images/wOHUYMcwMKL2vRlhqyCKvAIzsYI.png"
+                alt="arrow"
+                fill
+                className="object-contain"
+              />
+            </div>
             <span className="bg-[#9886fe] text-white text-small px-4 py-1 rounded-full font-medium shadow ml-2">
               You
             </span>

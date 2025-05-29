@@ -41,7 +41,7 @@ const FAQ = () => {
             Frequently<br />asked questions
           </h2>
           <p className="text-lg text-[#454140] text-left max-w-xl">
-            For any unanswered questions, reach out to our support team via email. We'll respond as soon as possible to assist you.
+            For any unanswered questions, reach out to our support team via email. We&apos;ll respond as soon as possible to assist you.
           </p>
         </div>
         {/* Right: Accordion */}

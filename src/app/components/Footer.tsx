@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => (
   <footer className="w-full bg-[#181012] pl-0 pr-0">
@@ -7,7 +8,14 @@ const Footer = () => (
         {/* Logo and description */}
         <div className="flex-1 mb-8 md:mb-0 flex flex-col items-start">
           <div className="flex items-center mb-3">
-            <img src="https://framerusercontent.com/images/MRA5lLDeZkPvIGByV5ieTZ3CXTQ.png" alt="TaskHub Logo" className="w-35 h-6 mr-2" />
+            <div className="w-35 h-6 relative mr-2">
+              <Image 
+                src="https://framerusercontent.com/images/MRA5lLDeZkPvIGByV5ieTZ3CXTQ.png" 
+                alt="TaskHub Logo" 
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
           <p className="text-[#B8B3B0] text-sm max-w-xs">Streamline your workflow, manage projects, and empower your team.</p>
         </div>

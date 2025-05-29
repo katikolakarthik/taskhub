@@ -1,6 +1,8 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+
 const integrations = [
   // First row (7 icons)
   [
@@ -51,7 +53,14 @@ const Integrations = () => (
             key={idx}
             className={`flex items-center justify-center rounded-2xl ${item.bg} w-18 h-18 md:w-22 md:h-22`}
           >
-            <img src={item.img} alt="" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
+            <div className="w-8 h-8 md:w-10 md:h-10 relative">
+              <Image 
+                src={item.img} 
+                alt={`Integration icon ${idx + 1}`} 
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         ))}
       </div>
@@ -62,7 +71,14 @@ const Integrations = () => (
             key={idx}
             className={`flex items-center justify-center rounded-2xl ${item.bg} w-18 h-18 md:w-22 md:h-22`}
           >
-            <img src={item.img} alt="" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
+            <div className="w-8 h-8 md:w-10 md:h-10 relative">
+              <Image 
+                src={item.img} 
+                alt={`Integration icon ${idx + 1}`} 
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         ))}
       </div>
