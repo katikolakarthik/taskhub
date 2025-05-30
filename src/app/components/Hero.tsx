@@ -79,9 +79,9 @@ const Hero = () => {
         </p>
       </div>
       {/* Call to action buttons */}
-      <div className='flex md:flex-row sm:flex-col md:gap-4'>
+      <div className='flex md:flex-row flex-col md:gap-4'>
         <button className=' text-[#120A0B] font-semibold px-8 py-4 rounded-full text-lg shadow' style={{ background: 'var(--token-5b864cb5-f3a0-4913-a245-1c1b51c03711, rgb(255, 216, 111))' }}>Book a Demo</button>
-        <button className='bg-white text-[#120A0B] font-semibold px-8 py-4 rounded-full text-lg border border-gray-300 shadow sm:mt-4 md:mt-0 '>Contact Sales</button>
+        <button className='bg-white text-[#120A0B] font-semibold px-8 py-4 rounded-full text-lg border border-gray-300 shadow mt-4 md:mt-0 '>Contact Sales</button>
       </div>
     </div>
   )
