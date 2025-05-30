@@ -1,8 +1,6 @@
 'use client'
 import React from 'react';
 import {motion} from 'framer-motion'
-import Image from 'next/image'
-
 const testimonials = [
   {
     stars: 5,
@@ -33,7 +31,7 @@ const testimonials = [
 const starImg = "https://framerusercontent.com/images/tL8avdiXVdQ0SWTBtkuREC5LP48.svg";
 
 const Testimonials = () => (
-  <section className="w-full py-16 flex flex-col items-center pl-[120px] pr-[120px]">
+  <section className="w-full py-16 flex flex-col items-center ">
     {/* Top badge and heading */}
     <div className="mb-2 flex items-center justify-center">
       <motion.span className="bg-[#8EE6FF] text-[#120A0B] font-semibold px-4 py-1 rounded-full text-sm mr-2" style={{ transform: 'rotate(7deg)' }}
@@ -61,25 +59,16 @@ const Testimonials = () => (
           {/* Stars */}
           <div className="flex gap-1 mb-6 justify-start">
             {Array.from({ length: t.stars }).map((_, i) => (
-              <div key={i} className="w-7 h-7 relative">
-                <Image src={starImg} alt="star" fill className="object-contain" />
-              </div>
+              <img key={i} src={starImg} alt="star" className="w-7 h-7" />
             ))}
           </div>
           {/* Title */}
           <h3 className="font-semibold text-2xl mb-4">{t.title}</h3>
           {/* Description */}
-          <p className="text-[#454140] mb-8">{t.desc}</p>
+          <p className="text-[#454140] text-[18px] mb-8">{t.desc}</p>
           {/* User */}
           <div className="flex items-center gap-4 mt-auto">
-            <div className="w-12 h-12 relative">
-              <Image 
-                src={t.img} 
-                alt={t.name} 
-                fill 
-                className="rounded-full object-cover" 
-              />
-            </div>
+            <img src={t.img} alt={t.name} className="w-12 h-12 rounded-full object-cover" />
             <div className="text-left">
               <div className="font-bold">{t.name}</div>
               <div className="text-[#454140] text-sm">{t.role}</div>

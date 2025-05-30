@@ -1,26 +1,19 @@
+'use client'
 import React from 'react';
-import Image from 'next/image';
 
 const Footer = () => (
-  <footer className="w-full bg-[#181012] pl-0 pr-0">
+  <footer className="w-full bg-[#181012] pl-0 pr-0 flex items-center justify-center">
     <div className="max-w-6xl mx-auto px-4">
       <div className="w-full max-w-6xl flex flex-col md:flex-row gap-10 md:gap-0 justify-between items-start md:items-center mb-10 pt-16 px-4">
         {/* Logo and description */}
         <div className="flex-1 mb-8 md:mb-0 flex flex-col items-start">
           <div className="flex items-center mb-3">
-            <div className="w-35 h-6 relative mr-2">
-              <Image 
-                src="https://framerusercontent.com/images/MRA5lLDeZkPvIGByV5ieTZ3CXTQ.png" 
-                alt="TaskHub Logo" 
-                fill
-                className="object-contain"
-              />
-            </div>
+            <img src="https://framerusercontent.com/images/MRA5lLDeZkPvIGByV5ieTZ3CXTQ.png" alt="TaskHub Logo" className="w-35 h-6 mr-2" />
           </div>
           <p className="text-[#B8B3B0] text-sm max-w-xs">Streamline your workflow, manage projects, and empower your team.</p>
         </div>
         {/* Quick Links */}
-        <div className="flex-1 flex flex-row gap-12 justify-center">
+        <div className="flex-1 flex flex-row gap-12 justify-center items-center">
           <div>
             <h4 className="text-white font-semibold mb-3">Quick Links</h4>
             <ul className="text-[#B8B3B0] text-sm space-y-2">
@@ -43,12 +36,12 @@ const Footer = () => (
           </div>
         </div>
         {/* Newsletter */}
-        <div className="flex-1 flex flex-col items-start md:items-end mt-8 md:mt-0">
-          <h4 className="text-white font-semibold mb-3">Stay updated with our latest<br/>news and tips!</h4>
-          <div className='flex flex-row  justify-between items-center bg-white px-6 py-3 w-full rounded-4xl'>
-              <p>Enter your email</p>
-              <button className='bg-[#A89EFF] text-white px-4 py-2 rounded-4xl font-semibold '>Subscribe</button>
-          </div>
+        <div className="flex-1 flex flex-col  md:items-end mt-8 md:mt-0 w-full">
+          <h4 className="text-white font-semibold mb-3  md:text-right">Stay updated with our latest<br/>news and tips!</h4>
+          <form className='flex flex-col sm:flex-row justify-between items-center bg-white px-4 py-2 sm:px-6 sm:py-3 w-full max-w-md rounded-3xl gap-3 sm:gap-0'>
+            <input type="email" placeholder="Enter your email" className="flex-1 px-3 py-2 rounded-2xl outline-none text-sm bg-white text-black w-full sm:w-auto" />
+            <button type="submit" className='bg-[#A89EFF] text-white px-4 py-2 rounded-2xl font-semibold w-full sm:w-auto'>Subscribe</button>
+          </form>
         </div>
       </div>
       {/* Bottom bar */}

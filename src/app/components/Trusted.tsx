@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 const logos = [
   "https://framerusercontent.com/images/m2iRqc0vjWCAjaKDXwpBZLHL6Q.svg",
@@ -16,9 +15,9 @@ const Trusted = () => {
   const allLogos = [...logos, ...logos];
 
   return (
-    <div className="w-full py-8 flex flex-col items-center pl-[120px] pr-[120px]">
+    <div className="w-full py-8 flex flex-col items-center">
       <h2 className="text-xl md:text-2xl font-medium mb-8 text-center">
-        Trusted by the world&apos;s most innovative teams
+        Trusted by the world's most innovative teams
       </h2>
       <div className="overflow-hidden w-full">
         <motion.div
@@ -33,15 +32,13 @@ const Trusted = () => {
           }}
         >
           {allLogos.map((logo, idx) => (
-            <div key={idx} style={{ minWidth: 120, height: 48 }}>
-              <Image
-                src={logo}
-                alt={`Trusted logo ${idx + 1}`}
-                width={120}
-                height={48}
-                className="object-contain opacity-90"
-              />
-            </div>
+            <img
+              key={idx}
+              src={logo}
+              alt={`Trusted logo ${idx + 1}`}
+              className="h-12 w-15 object-contain opacity-90"
+              style={{ minWidth: 120 }}
+            />
           ))}
         </motion.div>
       </div>

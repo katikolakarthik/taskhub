@@ -44,7 +44,7 @@ const checkIcon = (
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
   return (
-    <section className="w-full py-10 flex flex-col items-center pl-[120px] pr-[120px]">
+    <section className="w-full py-10 flex flex-col items-center">
       {/* Badge */}
       <div className="mb-2 flex items-center justify-center">
         <motion.span className="bg-[#C9FF85] text-[#120A0B] font-semibold px-4 py-1 rounded-full text-sm mr-2" 
@@ -99,10 +99,11 @@ const Pricing = () => {
         </div> */}
       {/* Pricing Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl px-4 relative">
-        {plans.map((plan) => (
+        {plans.map((plan, idx) => (
           <motion.div
             key={plan.name}
             className={`flex flex-col bg-[#F7F3EF] rounded-3xl p-6 md:p-10 relative `}
+           
           >
             {/* Most popular label */}
             {/* {plan.highlight && (

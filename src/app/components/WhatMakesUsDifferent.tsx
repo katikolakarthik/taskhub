@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 import {motion} from 'framer-motion'
-import Image from 'next/image'
 
 const features = [
   {
@@ -26,10 +25,10 @@ const features = [
     desc: 'Collaborate effortlessly with your team, no matter where they are on real-time.',
     cardImg: 'https://framerusercontent.com/images/tdq1Wb7i4WfoAxgNMUqBf6tqVM.png?scale-down-to=512'
   }
-] as const;
+];
 
 const WhatMakesUsDifferent = () => (
-  <section className="w-full py-16 flex flex-col items-center pl-[120px] pr-[120px]">
+  <section className="w-full py-16 flex flex-col items-center">
     {/* Top badge and heading */}
     <div className="mb-2 flex items-center justify-center">
       <motion.span className="bg-[#FFD86F] text-[#120A0B] font-semibold px-4 py-1 rounded-full text-sm mr-2" style={{ transform: 'rotate(-7deg)' }}
@@ -52,46 +51,32 @@ const WhatMakesUsDifferent = () => (
       {/* Card 1 */}
       <div className="bg-[#F9F6F2] rounded-3xl p-8 flex flex-col items-start shadow-sm">
         <div className="mb-4 p-3 rounded-xl bg-[#FFEFAF] flex items-center justify-center">
-          <div className="w-7 h-7 relative">
-            <Image src={features[0].icon} alt="Activity tracking icon" fill className="object-contain" />
-          </div>
+          <img src={features[0].icon} alt="" className="w-7 h-7" />
         </div>
         <h3 className="font-bold text-xl mb-2">{features[0].title}</h3>
         <p className="text-[#454140] mb-6">{features[0].desc}</p>
         <div className="w-full flex flex-col gap-4">
-          <div className="relative w-full aspect-[4/3]">
-            <Image src={features[0].cardImg} alt="Activity tracking screenshot" fill className="rounded-xl object-cover" />
-          </div>
-          <div className="relative w-40 h-10">
-            <Image src={features[0].cardImg2} alt="Activity tracking badge" fill className="object-contain" />
-          </div>
+          <img src={features[0].cardImg} alt="" className="rounded-xl w-full object-cover" />
+          <img src={features[0].cardImg2} alt="" className="w-40 mt-2" />
         </div>
       </div>
       {/* Card 2 */}
       <div className="bg-[#F9F6F2] rounded-3xl p-8 flex flex-col items-start shadow-sm">
         <div className="mb-4 p-3 rounded-xl bg-[#C9F1FF] flex items-center justify-center">
-          <div className="w-7 h-7 relative">
-            <Image src={features[1].icon} alt="Task prioritization icon" fill className="object-contain" />
-          </div>
+          <img src={features[1].icon} alt="" className="w-7 h-7" />
         </div>
         <h3 className="font-bold text-xl mb-2">{features[1].title}</h3>
         <p className="text-[#454140] mb-6">{features[1].desc}</p>
-        <div className="relative w-full aspect-[4/3]">
-          <Image src={features[1].cardImg} alt="Task prioritization screenshot" fill className="rounded-xl object-cover" />
-        </div>
+        <img src={features[1].cardImg} alt="" className="rounded-xl w-full object-cover" />
       </div>
       {/* Card 3 */}
       <div className="bg-[#F9F6F2] rounded-3xl p-8 flex flex-col items-start shadow-sm">
         <div className="mb-4 p-3 rounded-xl bg-[#E6DEFF] flex items-center justify-center">
-          <div className="w-7 h-7 relative">
-            <Image src={features[2].icon} alt="Team collaboration icon" fill className="object-contain" />
-          </div>
+          <img src={features[2].icon} alt="" className="w-7 h-7" />
         </div>
         <h3 className="font-bold text-xl mb-2">{features[2].title}</h3>
         <p className="text-[#454140] mb-6">{features[2].desc}</p>
-        <div className="relative w-full aspect-[4/3]">
-          <Image src={features[2].cardImg} alt="Team collaboration screenshot" fill className="rounded-xl object-cover" />
-        </div>
+        <img src={features[2].cardImg} alt="" className="rounded-xl w-full object-cover" />
       </div>
     </div>
   </section>

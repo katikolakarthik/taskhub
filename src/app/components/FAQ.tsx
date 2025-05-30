@@ -27,7 +27,7 @@ const faqs = [
 const FAQ = () => {
   const [openIdx, setOpenIdx] = useState(0);
   return (
-    <section className="w-full py-10 flex flex-col items-center pl-[120px] pr-[120px]">
+    <section className="w-full py-10 flex flex-col items-center">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-5xl px-4 items-start">
         {/* Left: Heading and description */}
         <div className="flex flex-col items-start justify-center mb-8 md:mb-0">
@@ -41,7 +41,7 @@ const FAQ = () => {
             Frequently<br />asked questions
           </h2>
           <p className="text-lg text-[#454140] text-left max-w-xl">
-            For any unanswered questions, reach out to our support team via email. We&apos;ll respond as soon as possible to assist you.
+            For any unanswered questions, reach out to our support team via email. We'll respond as soon as possible to assist you.
           </p>
         </div>
         {/* Right: Accordion */}

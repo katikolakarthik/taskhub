@@ -12,15 +12,18 @@ import Footer from './components/Footer'
 const page = () => {
   return (
     <div>
-      <Nav />
-      <Hero />
-      <Quick />
-      <Trusted />
-      <WhatMakesUsDifferent />
-      <Integrations />
-      <Testimonials />
-      <Pricing />
-      <FAQ />
+  
+      <div className="px-2 sm:px-4 lg:px-[120px]">
+        <Nav />
+        <Hero />
+        <Quick />
+        <Trusted />
+        <WhatMakesUsDifferent />
+        <Integrations />
+        <Testimonials />
+        <Pricing />
+        <FAQ />
+      </div>
       <Footer />
     </div>
   )

@@ -1,8 +1,6 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-
 const integrations = [
   // First row (7 icons)
   [
@@ -26,7 +24,7 @@ const integrations = [
 ];
 
 const Integrations = () => (
-  <section className="w-full py-10 flex flex-col items-center pl-[120px] pr-[120px]">
+  <section className="w-full py-10 flex flex-col items-center px-4 ">
     {/* Top badge and heading */}
     <div className="mb-2 flex items-center justify-center">
       <motion.span className="bg-[#8EE6FF] text-[#120A0B] font-semibold px-4 py-1 rounded-full text-sm mr-2" style={{ transform: 'rotate(7deg)' }} 
@@ -45,40 +43,26 @@ const Integrations = () => (
       all with TaskHub task management solution
     </p>
     {/* Integrations grid */}
-    <div className="flex flex-col gap-6 w-full max-w-5xl px-4">
+    <div className="flex flex-col gap-3 md:gap-6 w-full max-w-5xl px-0">
       {/* First row: 7 icons */}
-      <div className="flex items-center justify-center gap-6">
+      <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6">
         {integrations[0].map((item, idx) => (
           <div
             key={idx}
-            className={`flex items-center justify-center rounded-2xl ${item.bg} w-18 h-18 md:w-22 md:h-22`}
+            className={`flex items-center justify-center rounded-2xl ${item.bg} w-14 h-14 md:w-18 md:h-18 lg:w-22 lg:h-22`}
           >
-            <div className="w-8 h-8 md:w-10 md:h-10 relative">
-              <Image 
-                src={item.img} 
-                alt={`Integration icon ${idx + 1}`} 
-                fill
-                className="object-contain"
-              />
-            </div>
+            <img src={item.img} alt="" className="w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 object-contain" />
           </div>
         ))}
       </div>
       {/* Second row: 6 icons */}
-      <div className="flex items-center justify-center gap-6">
+      <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6">
         {integrations[1].map((item, idx) => (
           <div
             key={idx}
-            className={`flex items-center justify-center rounded-2xl ${item.bg} w-18 h-18 md:w-22 md:h-22`}
+            className={`flex items-center justify-center rounded-2xl ${item.bg} w-14 h-14 md:w-18 md:h-18 lg:w-22 lg:h-22`}
           >
-            <div className="w-8 h-8 md:w-10 md:h-10 relative">
-              <Image 
-                src={item.img} 
-                alt={`Integration icon ${idx + 1}`} 
-                fill
-                className="object-contain"
-              />
-            </div>
+            <img src={item.img} alt="" className="w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 object-contain" />
           </div>
         ))}
       </div>
