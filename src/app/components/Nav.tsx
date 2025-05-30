@@ -1,33 +1,36 @@
 "use client"
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const Nav = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <motion.div className='h-20 w-full bg-white flex justify-between items-center mt-4 rounded-3xl cursor-pointer px-5'>
+    <motion.div className='h-20 w-full bg-white flex justify-between items-center mt-4 rounded-3xl cursor-pointer px-2 sm:px-5'>
       <div className='flex items-center'>
-          <img src="https://framerusercontent.com/images/6pk41POQwzRkqFLgLX6UKDZxEo.png" alt="" className='h-6 w-35'/>
+          <Image src="https://framerusercontent.com/images/6pk41POQwzRkqFLgLX6UKDZxEo.png" alt="Logo" width={140} height={24} className='h-6 w-35' />
           <div
-            className="relative flex items-center"
+            className="relative hidden md:flex items-center"
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <motion.p
-              className='text-black text-[15.5px] font-medium pl-19 md:block sm:hidden flex items-center'
+              className='text-black text-[15.5px] font-medium pl-4 md:pl-19 flex items-center'
               whileHover={{ color: '#A991FF' }}
               transition={{ duration: 0.2 }}
             >
               All Pages
-              <motion.img
-                src="https://res.cloudinary.com/dnomrmyzh/image/upload/v1748431076/down-arrow_db12qi.png"
-                alt=""
-                className='w-7 h-8 ml-1 md:block sm:hidden'
-                animate={{ rotate: dropdownOpen ? 180 : 0 }}
-                transition={{ duration: 0.2 }}
-                style={{ display: 'inline-block' }}
-              />
+              <motion.span className='ml-1 flex items-center'>
+                <Image
+                  src="https://res.cloudinary.com/dnomrmyzh/image/upload/v1748431076/down-arrow_db12qi.png"
+                  alt="Dropdown Arrow"
+                  width={28}
+                  height={32}
+                  className='w-7 h-8'
+                  style={{ display: 'inline-block' }}
+                  />
+              </motion.span>
             </motion.p>
             
             {dropdownOpen && (
@@ -35,9 +38,7 @@ const Nav = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
-                className="absolute z-50 bg-white rounded-xl p-5 ml-9
-                  left-1/2 -translate-x-1/2 top-10.5 w-[55vw] max-w-sm h-[70vh] 
-                  md:left-0 md:translate-x-0 md:top-12 md:w-auto md:max-w-none md:h-auto md:min-w-[700px] scrollbar-hide"
+                className="absolute z-50 bg-white rounded-xl p-5 ml-0 sm:ml-9 left-1/2 -translate-x-1/2 top-10.5 w-[90vw] max-w-sm h-[70vh] md:left-0 md:translate-x-0 md:top-12 md:w-auto md:max-w-none md:h-auto md:min-w-[700px] scrollbar-hide"
                 // style={{ boxShadow: '0 8px 32px rgba(80, 80, 80, 0.10)' }}
               >
                 <div className="grid grid-cols-1 w-full right-0 md:grid-cols-4 gap-8 md:gap-12">
@@ -89,30 +90,30 @@ const Nav = () => {
             )}
           </div>
           <motion.p
-            className='text-black text-[15.5px] font-medium pl-8 md:block sm:hidden'
+            className='text-black text-[15.5px] font-medium pl-4 md:pl-8 md:block sm:hidden hidden md:flex items-center'
             whileHover={{ color: '#A991FF' }}
             transition={{ duration: 0.2 }}
           >
             Features
           </motion.p>
           <motion.p
-            className='text-black text-[15.5px] font-medium pl-8 md:block sm:hidden'
+            className='text-black text-[15.5px] font-medium pl-4 md:pl-8 md:block sm:hidden hidden md:flex items-center'
             whileHover={{ color: '#A991FF' }}
             transition={{ duration: 0.2 }}
           >
             Contacts
           </motion.p>
       </div>
-      <div className='flex items-center gap-6'>
+      <div className='flex items-center gap-4 md:gap-6'>
         <motion.p
-            className='text-black text-[16px] font-medium  md:block sm:hidden'
+            className='text-black text-[16px] font-medium hidden md:block'
             whileHover={{ color: '#A991FF' }}
             transition={{ duration: 0.2 }}
           >
             Login
           </motion.p>
         <motion.p
-            className='bg-black text-white text-[16px] px-6 py-2  rounded-4xl md:block sm:hidden'
+            className='bg-black text-white text-[16px] px-6 py-2 rounded-4xl hidden md:block'
             whileHover={{ backgroundColor: '#393333' }}
             transition={{ duration: 0.2 }}
           >
@@ -120,21 +121,24 @@ const Nav = () => {
           </motion.p>
       </div>
 
-      <div className='md:hidden '>
+      <div className='md:hidden'>
         {dropdownOpen ?  (
-          <img
+          <Image
             onClick={() => setDropdownOpen(false)}
             src="https://img.icons8.com/material-rounded/24/multiply--v1.png"
             alt="close menu"
-            className='h-8 w-8 ml-4 cursor-pointer md:block lg:hidden'
-            
+            width={32}
+            height={32}
+            className='h-8 w-8 ml-4 cursor-pointer'
           />
         ) : (
-          <img
+          <Image
             onClick={() => setDropdownOpen(true)}
             src="https://img.icons8.com/ios-filled/50/menu--v6.png"
             alt="open menu"
-            className='h-8 w-8 ml-4 cursor-pointer md:block lg:hidden'
+            width={32}
+            height={32}
+            className='h-8 w-8 ml-4 cursor-pointer'
           />
         )}
       </div>
