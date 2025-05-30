@@ -17,7 +17,7 @@ const Trusted = () => {
   return (
     <div className="w-full py-8 flex flex-col items-center">
       <h2 className="text-xl md:text-2xl font-medium mb-8 text-center">
-        Trusted by the world's most innovative teams
+        Trusted by the world&apos;s most innovative teams
       </h2>
       <div className="overflow-hidden w-full">
         <motion.div

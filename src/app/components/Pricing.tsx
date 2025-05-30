@@ -99,7 +99,7 @@ const Pricing = () => {
         </div> */}
       {/* Pricing Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl px-4 relative">
-        {plans.map((plan, idx) => (
+        {plans.map((plan) => (
           <motion.div
             key={plan.name}
             className={`flex flex-col bg-[#F7F3EF] rounded-3xl p-6 md:p-10 relative `}
