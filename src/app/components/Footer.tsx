@@ -38,10 +38,21 @@ const Footer = () => (
         </div>
         {/* Newsletter */}
         <div className="flex-1 flex flex-col  md:items-end mt-8 md:mt-0 w-full">
-          <h4 className="text-white font-semibold mb-3  md:text-right">Stay updated with our latest<br/>news and tips!</h4>
-          <form className='flex flex-col sm:flex-row justify-between items-center bg-white px-4 py-2 sm:px-6 sm:py-3 w-full max-w-md rounded-3xl gap-3 sm:gap-0'>
-            <input type="email" placeholder="Enter your email" className="flex-1 px-3 py-2 rounded-2xl outline-none text-sm bg-white text-black w-full sm:w-auto" />
-            <button type="submit" className='bg-[#A89EFF] text-white px-4 py-2 rounded-2xl font-semibold w-full sm:w-auto'>Subscribe</button>
+          <h4 className="text-white font-semibold mb-3 text-left md:text-right">
+            Stay updated with our latest<br/>news and tips!
+          </h4>
+          <form className='flex flex-row justify-between items-center bg-white px-4 py-2 sm:px-6 sm:py-3 w-full max-w-md rounded-3xl gap-2'>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-3 py-2 rounded-2xl outline-none text-sm bg-white text-black"
+            />
+            <button
+              type="submit"
+              className='bg-[#A89EFF] text-white px-4 py-2 rounded-2xl font-semibold'
+            >
+              Subscribe
+            </button>
           </form>
         </div>
       </div>
