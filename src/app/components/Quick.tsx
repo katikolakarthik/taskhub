@@ -42,7 +42,7 @@ const Quick = () => {
       <img
         src="https://framerusercontent.com/images/rN7FYcaLH7ZQff8gdhHQytFe6cg.png"
         alt="Dashboard Example"
-        className="rounded-2xl sm:rounded-3xl shadow-xl w-full max-w-[180px] max-h-[300px] h-auto sm:max-w-[95vw] sm:lg:w-[1000px] sm:lg:h-[700px] sm:w-140 sm:h-250"
+        className="rounded-2xl sm:rounded-3xl shadow-xl w-full max-w-[180px] max-h-[650px] h-auto sm:max-w-[95vw] sm:lg:w-[1000px] sm:lg:h-[700px] sm:w-140 sm:h-250"
         style={{ maxWidth: 1200 }}
       />
     </div>
